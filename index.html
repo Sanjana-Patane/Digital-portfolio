@@ -1,0 +1,156 @@
+<html>
+<head>
+    <title>PERSONAL PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header"> 
+        <div id="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="header">Home</a></li>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Resume">Resume</a></li>
+                    <li><a href="Project">Project</a></li>
+                    <li><a href="contact">contact</a></li>               
+                 </ul>
+            </nav>
+            <div id="page1">
+                <div class="header-text">
+                    <p>ELECTRONICS AND TELECOMMUNICATION ENGINEER</p>
+                    <H1>Hello, I'm <span>Sanjana Santosh Patane</span> </H1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    ------------about me-------------  -->
+     <div id="page2">
+        <div id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/me.png.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            
+                            Hi, my name is Sanjana Patane. I am currently a first-year college student pursuing Electronics and Telecommunication Engineering at MIT Academy of Engineering, Alandi.
+                            <br>
+                            As an engineering student, I enjoy learning new things, working on creative projects, and solving technical problems in programming and electronics. My branch mainly focuses on coding, programming, circuits, and communication systems, which makes it exciting to explore and develop new technologies.
+                            <br>
+                            I love experimenting with new ideas, finding innovative solutions, and applying my knowledge to real-world challenges. Whether it's designing circuits, coding, or solving technical issues, I always enjoy the process of learning and improving my skills.
+                        </p>
+    
+    
+    
+                         <div id="flex1">
+                        <h3>Birthaday : </h3><p id="p1">13 November 2005</p>
+                        <h3>Degree pursuing :</h3><p>bachelor in tecnology</p>
+                        </div>
+                        <div id="flex2">
+                        <h3>E-Mail :</h3><p id="p2">202401070196@mitaoe.ac.in></p>
+                        <h3>Phone No. :</h3><p>8806332778</p>
+                        </div>
+                        <div id="flex3">
+                        <h3>Age :</h3><p id="p3">19</p>
+                        <h3>City :</h3><p>Alandi,pune</p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------Resume--------------------- -->
+     <div id="Resume">
+        <div id="page3">
+            <h1 id="resh">Resume :</h1>
+            <img id="res" src="images/resume1.png.jpg">
+         </div>
+    </div> 
+  <!-- ----------- project--------------- -->
+     <div id="Project">
+        <div id="page4">
+            <div id="head">
+            <h1 id="prohead">Project :</h1>
+            <P id="prop">1.Rain detector alarm<br><br>2.Automatic car parking</P>
+            </div>
+      <div class="achi">
+        <h1>Achivements :</h1>
+         <div id="div1"><h3 id="achi1">International Compitition</h3><p>I have participate in IYMC international math compitition</p></div>
+         <div id="div2"><h3 id="achi2">Python</h3><p>I have successfully completed Python cource provided by CISCO.</p></div>
+         <div id="div3"><h3 id="achi3">PCB symulation</h3><p>I have successfully done PCB symulation workshop using kikad</p></div>
+         <div id="div4"><h3 id="achi4">C language Certificate</h3><p>I have certification of problem solving session on c language by the knowladge network</p></div>
+        </div>
+       </div> 
+         <!-- ------------contact-------------- -->
+     </div>
+     <div id="page5">
+      <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 id="sub-title">Contact Me </h1>
+                    <p id="a"> <img id="img1" src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png" alt="">202401070196@mitaoe.ac.in</p>
+                    <p id="b"><img id="img2" src="https://cdn-icons-png.flaticon.com/128/831/831360.png" alt=""> +91 8806332778</p>
+                    <div id="social-media-icons">
+                        <img id="img3" src="https://cdn-icons-png.flaticon.com/128/1384/1384023.png" alt="">
+                         <img id="img4" src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="">
+                         <img id="img5" src="https://cdn-icons-png.flaticon.com/128/1051/1051309.png" alt="">
+                         <img id="img6" src="https://cdn-icons-png.flaticon.com/128/1384/1384088.png" alt=""> 
+                         <!-- in all href pste link of all url -->
+                     </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="Email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2"> Submit </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+     </div>  
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwF6_R5NL9K8ZbdqfAu7uD5JE-pgveoGJMgL1G4_IOHtP2TVRPDmSGZr7_TryP4HiljpQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+       const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML= "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML= ""
+                },10000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRdoLLgW_YtIhtQiRZ_W6e2vvXOHaOt0gpq_WxlN_sUEMtPGJ33z-tIsHWOc1U-gO5/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html> 
